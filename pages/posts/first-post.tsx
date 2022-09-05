@@ -7,7 +7,7 @@ import Layout from '../../components/Layout';
 export default function FirstPost(): JSX.Element {
   console.log('Hello First Post in the console')
   return (
-      <Layout>
+      <Layout home={false}>
         <>
           <Head>
             <title>First Post</title>
