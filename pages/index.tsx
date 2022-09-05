@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <Link href="/posts/first-post">this page!</Link>
+          <Link href="/posts/first-post">See my First Post</Link>
         </h1>
 
         <p className={styles.description}>
