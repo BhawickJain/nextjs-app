@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from "next/link";
 
 export default function FirstPost(): JSX.Element {
@@ -7,6 +8,12 @@ export default function FirstPost(): JSX.Element {
       <h2>
         <Link href="/">Back to Home</Link>
       </h2>
+      <Image
+        src="/images/profile.jpg"
+        height={144}
+        width={144}
+        alt="Your Name"
+      />
     </>
   );
 }
