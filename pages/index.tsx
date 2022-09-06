@@ -19,8 +19,8 @@ export default function Home( { allPostsData }: HomeProps ) {
         <section className={utilStyles.headingMd}>
           <p>Bhawick Jain</p>
           <p>
-            (This is a sample website - you’ll be building a site like this on{' '}
-            <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          Welcome to the Next.js site, it is a sample typescript project with static prerendering.
+          Markdown post have been prerendered into links and pages.
           </p>
           <Link href="/posts/first-post">Check my first Post out!</Link>
         </section>
