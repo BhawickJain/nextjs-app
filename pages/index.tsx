@@ -1,15 +1,21 @@
+import { getSortedPostsData, Post } from '../lib/posts';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/Layout';
 import Link from "next/link";
 import utilStyles from '../styles/utils.module.css';
 
-export default function Home() {
+interface HomeProps {
+  allPostsData: Post[]
+}
+
+export default function Home( { allPostsData }: HomeProps ) {
   return (
     <Layout home>
       <>
         <Head>
           <title>{siteTitle}</title>
         </Head>
+        {/* Keep the existing code here */}
         <section className={utilStyles.headingMd}>
           <p>Bhawick Jain</p>
           <p>
@@ -18,8 +24,31 @@ export default function Home() {
           </p>
           <Link href="/posts/first-post">Check my first Post out!</Link>
         </section>
+        {/* Add this <section> tag below the existing <section> tag */}
+        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+          <h2 className={utilStyles.headingLg}>Blog</h2>
+          <ul className={utilStyles.list}>
+            {allPostsData.map(({ id, date, title }) => (
+              <li className={utilStyles.listItem} key={id}>
+                {title}
+                <br />
+                {id}
+                <br />
+                {date}
+              </li>
+            ))}
+          </ul>
+        </section>
       </>
     </Layout>
   );
 }
 
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
