@@ -1,8 +1,12 @@
 import Layout from "../../components/Layout";
-import { Post, PostId } from "../../lib/posts";
+import { IPost, PostId } from "../../lib/posts";
 import { getAllPostIds, getPostData} from '../../lib/posts';
 
-export default function Post(postData: Post) {
+interface PostProps {
+  postData: IPost
+}
+
+export default function Post({ postData }: PostProps) {
     return (
     <Layout home={false}>
       <>

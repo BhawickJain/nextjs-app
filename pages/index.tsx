@@ -1,11 +1,11 @@
-import { getSortedPostsData, Post } from '../lib/posts';
+import { getSortedPostsData, IPost } from '../lib/posts';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/Layout';
 import Link from "next/link";
 import utilStyles from '../styles/utils.module.css';
 
 interface HomeProps {
-  allPostsData: Post[]
+  allPostsData: IPost[]
 }
 
 export default function Home( { allPostsData }: HomeProps ) {
