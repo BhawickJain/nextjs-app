@@ -2,6 +2,7 @@ import { getSortedPostsData, IPost } from '../lib/posts';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/Layout';
 import Link from "next/link";
+import Date from '../components/Date';
 import utilStyles from '../styles/utils.module.css';
 
 interface HomeProps {
@@ -25,20 +26,25 @@ export default function Home( { allPostsData }: HomeProps ) {
           <p>Bhawick Jain</p>
           <p>
           Welcome to the Next.js site, it is a sample typescript project with static prerendering.
-          Markdown post have been prerendered into links and pages.
+          Markdown post have been prerendered into links and pages. 
+          Below are some posts I have written!
           </p>
 
         </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-          <h2 className={utilStyles.headingLg}>Blog</h2>
+          <h2 className={utilStyles.headingLg}>Posts</h2>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>
-                {date}
-                <br/>
-                <Link href={`/posts/${id}`}>{title}</Link>
+                <Link href={`/posts/${id}`}>
+                  <a>{title}</a>
+                </Link>
+                <br />
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date} />
+                </small>
               </li>
-            ))}
+           ))}
           </ul>
         </section>
       </>
