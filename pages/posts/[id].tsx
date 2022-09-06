@@ -2,6 +2,8 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import { IPost, PostId } from "../../lib/posts";
 import { getAllPostIds, getPostData} from '../../lib/posts';
+import Date from "../../components/Date"
+import utilStyles from '../../styles/utils.module.css'
 
 interface PostProps {
   postData: IPost
@@ -14,12 +16,14 @@ export default function Post({ postData }: PostProps) {
         <Head>
           <title>{postData.title}</title>
         </Head>
-        {postData.title}
-        <br />
-        {postData.id}
-        <br />
-        {postData.date}
-        <div dangerouslySetInnerHTML={{__html: postData.content}}/>
+        <article>
+          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+          <div className={utilStyles.lightText}>
+            <Date dateString={postData.date} />
+            {/* {postData.id} */}
+          </div>
+          <div dangerouslySetInnerHTML={{__html: postData.content}}/>
+        </article>
       </>
     </Layout>
 )}
