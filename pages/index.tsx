@@ -8,6 +8,12 @@ interface HomeProps {
   allPostsData: IPost[]
 }
 
+/**
+ * Note how the home attribute is present without a value 
+ * within the Layout tag, this is to say that this Layout
+ * is the Home page. There is conditional rendering within
+ * the Layout component for a home page.
+ */
 export default function Home( { allPostsData }: HomeProps ) {
   return (
     <Layout home>
