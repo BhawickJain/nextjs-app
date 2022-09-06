@@ -6,14 +6,14 @@ import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-export interface Post {
+export interface IPost {
   id: string,
   content: string;
   title: string; 
   date: string;
 }
 
-export function getSortedPostsData(): Post[] {
+export function getSortedPostsData(): IPost[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
