@@ -49,3 +49,60 @@ export function getSortedPostsData(): Post[] {
     }
   });
 }
+
+export interface PostId {
+    params: {
+        id: string;
+    }
+}
+
+/**
+ * The returned list is not just an array of strings — it must
+ * be an array of objects that look like the comment above. 
+ * Each object must have the params key and contain an object 
+ * with the id key (because we’re using [id] in the file name).
+ * Otherwise, getStaticPaths will fail.
+ * 
+ * The [id].tsx will look for an id in params
+ */
+export function getAllPostIds() {
+  const fileNames = fs.readdirSync(postsDirectory);
+
+  // Returns an array that looks like this:
+  // [
+  //   {
+  //     params: {
+  //       id: 'ssg-ssr'
+  //     }
+  //   },
+  //   {
+  //     params: {
+  //       id: 'pre-rendering'
+  //     }
+  //   }
+  // ]
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ''),
+      },
+    };
+  });
+}
+
+export function getPostData(id: string) {
+  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+  // Use gray-matter to parse the post metadata section
+  const matterResult = matter(fileContents);
+
+  // Combine the data with the id
+  return {
+    id,
+    title: matterResult.data.title,
+    date: matterResult.data.date,
+    content: matterResult.content,
+    ...matterResult.data,
+  };
+}
