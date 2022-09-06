@@ -15,26 +15,22 @@ export default function Home( { allPostsData }: HomeProps ) {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        {/* Keep the existing code here */}
         <section className={utilStyles.headingMd}>
           <p>Bhawick Jain</p>
           <p>
           Welcome to the Next.js site, it is a sample typescript project with static prerendering.
           Markdown post have been prerendered into links and pages.
           </p>
-          <Link href="/posts/first-post">Check my first Post out!</Link>
+
         </section>
-        {/* Add this <section> tag below the existing <section> tag */}
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Blog</h2>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>
-                {title}
-                <br />
-                {id}
-                <br />
                 {date}
+                <br/>
+                <Link href={`/posts/${id}`}>{title}</Link>
               </li>
             ))}
           </ul>
