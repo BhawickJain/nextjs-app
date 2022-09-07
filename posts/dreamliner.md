@@ -1,6 +1,6 @@
 ---
-title: 'Two Forms of Pre-rendering'
-date: '2020-01-01'
+title: 'Dreamliner'
+date: '2022-09-07'
 ---
 
 ![Dreamliner Safety at Stake](https://akm-img-a-in.tosshub.com/indiatoday/images/story/201301/nightmare_660_011213103305.jpg)
