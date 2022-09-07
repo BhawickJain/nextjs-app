@@ -11,7 +11,7 @@ const nextConfig = {
     },
   },
   basePath: ghPages ? reponame : "",
-  // assetPrefix: ghPages ? reponame : "",
+  assetPrefix: ghPages ? reponame : "",
 };
 
 module.exports = nextConfig;
