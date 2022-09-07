@@ -5,6 +5,7 @@ const reponame = 'nextjs-app';
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images.unoptimized = true,
   basePath: ghPages? reponame : '',
   assetPrefix: ghPages ? reponame : '',
 }
