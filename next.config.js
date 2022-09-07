@@ -5,10 +5,9 @@ const reponame = "/nextjs-app";
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
+  images: {
+    loader: 'akamai',
+    path: '',
   },
   basePath: ghPages ? reponame : "",
   assetPrefix: ghPages ? reponame : "",
