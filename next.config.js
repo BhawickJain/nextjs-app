@@ -1,5 +1,5 @@
 const ghPages = process.env.DEPLOY_TARGET === "gh-pages";
-const reponame = "nextjs-app";
+const reponame = "/nextjs-app";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
