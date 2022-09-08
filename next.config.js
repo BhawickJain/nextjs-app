@@ -1,4 +1,4 @@
-const ghPages = process.env.DEPLOY_TARGET === "gh-pages";
+const isProd = process.env.DEPLOY_TARGET === "gh-pages";
 const repoName = "/nextjs-app";
 
 /** @type {import('next').NextConfig} */
@@ -9,8 +9,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  basePath: ghPages ? repoName : "",
-  assetPrefix: ghPages ? repoName : "",
+  basePath: isProd ? repoName : "",
+  assetPrefix: isProd ? repoName : "",
 };
 
 module.exports = nextConfig;
