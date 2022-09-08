@@ -9,8 +9,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  basePath: ghPages===null ? process.env.NEXT_PUBLIC_BASE_PATH : "",
-  assetPrefix: ghPages===null ? process.env.NEXT_PUBLIC_BASE_PATH : "",
+  basePath: ghPages===null ? reponame : "",
+  assetPrefix: ghPages===null ? reponame : "",
 };
 
 module.exports = nextConfig;
