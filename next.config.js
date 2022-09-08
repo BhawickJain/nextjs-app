@@ -1,5 +1,5 @@
 const isProd = process.env.NODE_ENV === 'production'
-const repoName = process.env.GITHUB_REPOSITORY.matchAll(/(.*)\/(.*)/g)[0][2]
+const repoName = process.env.GITHUB_REPO.matchAll(/(.*)\/(.*)/g)[0][2]
 const prefixedPath = `/${repoName}`;
 
 /** @type {import('next').NextConfig} */
