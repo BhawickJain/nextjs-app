@@ -1,6 +1,5 @@
 const isProd = process.env.NODE_ENV === 'production'
-// const isProd = process.env.DEPLOY_TARGET === "gh-pages";
-const repoName = "/nextjs-app";
+const prefixedPath = `/${process.env.REPO_NAME}`;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,8 +9,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  basePath: isProd ? repoName : "",
-  assetPrefix: isProd ? repoName : "",
+  basePath: isProd ? prefixedPath : "",
+  assetPrefix: isProd ? prefixedPath : "",
 };
 
 module.exports = nextConfig;
