@@ -9,8 +9,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  basePath: isProd ? prefixedPath : "",
-  assetPrefix: isProd ? prefixedPath : "",
+  basePath: isProd ? prefixedPath : undefined,
+  assetPrefix: isProd ? prefixedPath : undefined,
 };
 
 module.exports = nextConfig;
