@@ -13,6 +13,7 @@ jobs:
 
     env:
       REPO_NAME: nextjs-app
+      GITHUB_REPOSITORY: ${{ github.repository }}
 
     steps:
       - name: Checkout 🛎️
