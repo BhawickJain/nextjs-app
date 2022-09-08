@@ -3,7 +3,7 @@ title: 'Dreamliner'
 date: '2022-09-07'
 ---
 
-![Dreamliner Safety at Stake](https://akm-img-a-in.tosshub.com/indiatoday/images/story/201301/nightmare_660_011213103305.jpg)
+![Dreamliner Safety at Stake](https://drive.google.com/uc?export=view&id=1NYUfS5DJ8DzosN3-RW6q6IFaDVbk-Uhv)
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
