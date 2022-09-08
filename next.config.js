@@ -1,4 +1,5 @@
-const isProd = process.env.DEPLOY_TARGET === "gh-pages";
+const isProd = process.env.NODE_ENV === 'production'
+// const isProd = process.env.DEPLOY_TARGET === "gh-pages";
 const repoName = "/nextjs-app";
 
 /** @type {import('next').NextConfig} */
