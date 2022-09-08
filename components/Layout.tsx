@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
@@ -44,9 +43,9 @@ export default function Layout({ children, home }: LayoutProps) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
-              priority //   disables lazy loading
-              src={`/${cdnBasePath}/images/profile.jpg`}
+            <img
+              // priority //   disables lazy loading
+              src={`${cdnBasePath}/images/profile.jpg`}
               className={utilStyles.borderCircle}
               height={144}
               width={144}
@@ -58,9 +57,9 @@ export default function Layout({ children, home }: LayoutProps) {
           <>
             <Link href="/">
               <a>
-                <Image
-                  priority
-                  src={`/${cdnBasePath}/images/profile.jpg`}
+                <img
+                  // priority
+                  src={`${cdnBasePath}/images/profile.jpg`}
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
