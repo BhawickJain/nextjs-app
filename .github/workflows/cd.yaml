@@ -12,8 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      NEXT_PUBLIC_BASE_PATH: /nextjs-app
-      DEPLOY_TARGET: gh-pages
+      REPO_NAME: nextjs-app
 
     steps:
       - name: Checkout 🛎️
