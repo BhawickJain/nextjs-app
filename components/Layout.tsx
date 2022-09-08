@@ -46,7 +46,7 @@ export default function Layout({ children, home }: LayoutProps) {
           <>
             <Image
               priority //   disables lazy loading
-              src={`${cdnBasePath}/images/profile.jpg`}
+              src={`/${cdnBasePath}/images/profile.jpg`}
               className={utilStyles.borderCircle}
               height={144}
               width={144}
@@ -60,7 +60,7 @@ export default function Layout({ children, home }: LayoutProps) {
               <a>
                 <Image
                   priority
-                  src={`${cdnBasePath}/images/profile.jpg`}
+                  src={`/${cdnBasePath}/images/profile.jpg`}
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
