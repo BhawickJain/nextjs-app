@@ -1,0 +1,14 @@
+.square{
+    padding: 2px;
+    margin: 2px;
+    background-color:green;
+    border: solid 2px transparent;
+    border-radius: 2px;
+}
+
+.square:hover {
+    border: rgb(0, 68, 0) solid 4px;
+}
+.pressed {
+    background-color:darkgreen;
+}
