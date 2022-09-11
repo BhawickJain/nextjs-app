@@ -1,9 +1,7 @@
-import { getSortedPostsData, IPost } from '../lib/posts';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/Layout';
-import Link from "next/link";
-import Date from '../components/Date';
 import utilStyles from '../styles/utils.module.css';
+import Grid from '../components/Grid/Grid';
 
 /**
  * Note how the home attribute is present without a value 
@@ -27,6 +25,13 @@ export default function Home() {
           
           This is a single page app (SPA) site!
           </p>
+        </section>
+        <section>
+          And look! This is a grid of squares:
+
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+            <Grid rows={10} columns={10} size={45}/>
+          </div>
         </section>
       </>
     </Layout>
