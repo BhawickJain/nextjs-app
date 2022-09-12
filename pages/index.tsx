@@ -1,21 +1,21 @@
-import { getSortedPostsData, IPost } from '../lib/posts';
-import Head from 'next/head';
-import Layout, { siteTitle } from '../components/Layout';
+import { getSortedPostsData, IPost } from "../lib/posts";
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/Layout";
 import Link from "next/link";
-import Date from '../components/Date';
-import utilStyles from '../styles/utils.module.css';
+import Date from "../components/Date";
+import utilStyles from "../styles/utils.module.css";
 
 interface HomeProps {
-  allPostsData: IPost[]
+  allPostsData: IPost[];
 }
 
 /**
- * Note how the home attribute is present without a value 
+ * Note how the home attribute is present without a value
  * within the Layout tag, this is to say that this Layout
  * is the Home page. There is conditional rendering within
  * the Layout component for a home page.
  */
-export default function Home( { allPostsData }: HomeProps ) {
+export default function Home({ allPostsData }: HomeProps) {
   return (
     <Layout home>
       <>
@@ -25,11 +25,10 @@ export default function Home( { allPostsData }: HomeProps ) {
         <section className={utilStyles.headingMd}>
           <p>Bhawick Jain</p>
           <p>
-          Welcome to the Next.js site, it is a sample typescript project with static prerendering.
-          Markdown post have been prerendered into links and pages. 
-          Below are some posts I have written!
+            Welcome to the Next.js site, it is a sample typescript project with
+            static prerendering. Markdown post have been prerendered into links
+            and pages. Below are some posts I have written!
           </p>
-
         </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2 className={utilStyles.headingLg}>Posts</h2>
@@ -44,7 +43,7 @@ export default function Home( { allPostsData }: HomeProps ) {
                   <Date dateString={date} />
                 </small>
               </li>
-           ))}
+            ))}
           </ul>
         </section>
       </>

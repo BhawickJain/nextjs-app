@@ -1,15 +1,15 @@
-import Head from 'next/head';
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
+import Head from "next/head";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
 interface LayoutProps {
-    children: JSX.Element
-    home: boolean
+  children: JSX.Element;
+  home: boolean;
 }
 
-const name = 'Bhawick Jain';
-export const siteTitle = 'My first Next.js Site!';
+const name = "Bhawick Jain";
+export const siteTitle = "My first Next.js Site!";
 
 /**
  * To use this container class inside components/layout.js, you need to:
@@ -19,7 +19,7 @@ export const siteTitle = 'My first Next.js Site!';
  * This is what CSS Modules does: It automatically generates unique
  * class names. As long as you use CSS Modules, you don’t have to worry
  * about class name collisions.
- * 
+ *
  */
 export default function Layout({ children, home }: LayoutProps) {
   return (
@@ -33,7 +33,7 @@ export default function Layout({ children, home }: LayoutProps) {
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle,
+            siteTitle
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
