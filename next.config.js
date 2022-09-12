@@ -13,7 +13,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: "akamai",
-    path: "",
+    path: ".",
   },
   basePath: isProd ? prefixedPath : undefined,
   assetPrefix: isProd ? prefixedPath : undefined,
