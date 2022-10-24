@@ -44,7 +44,7 @@ export default function Layout({ children, home }: LayoutProps) {
           <>
             <img
               // priority //   disables lazy loading
-              src={`https://bhawickjain.github.io/nextjs-app/images/profile.jpg`}
+              src={`https://raw.githubusercontent.com/BhawickJain/nextjs-blog-template-ts/main/public/images/profile.jpg`}
               className={utilStyles.borderCircle}
               height={144}
               width={144}
