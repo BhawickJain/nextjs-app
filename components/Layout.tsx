@@ -58,7 +58,7 @@ export default function Layout({ children, home }: LayoutProps) {
               <a>
                 <img
                   // priority
-                  src={`https://bhawickjain.github.io/nextjs-app/images/profile.jpg`}
+                  src={`https://raw.githubusercontent.com/BhawickJain/nextjs-blog-template-ts/main/public/images/profile.jpg`}
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
